@@ -1,0 +1,5 @@
+[INFO] [launch]: All log files can be found below /home/hornet/.ros/log/2026-11-10-01-54-51-515573-hornet-1245630
+[INFO] [launch]: Default logging verbosity is set to INFO
+[INFO] [rl_controller.py-1]: process started with pid [1245727]
+[rl_controller.py-1] [INFO] [1794255896.588739860] [rl_controller]: loaded policy /home/hornet/Desktop/pathfollowingbot/install/pathbot_rl/share/pathbot_rl/models/sac_warehouse.zip; set a goal in RViz
+[rl_controller.py-1] [INFO] [1794255907.969407944] [rl_controller]: new goal (3.00, 0.00)
