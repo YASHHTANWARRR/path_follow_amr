@@ -1,0 +1,52 @@
+[0.021s] Invoking command in '/home/hornet/Desktop/pathfollowingbot/build/pathbot_description': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake /home/hornet/Desktop/pathfollowingbot/src/pathbot_description -DCMAKE_INSTALL_PREFIX=/home/hornet/Desktop/pathfollowingbot/install/pathbot_description
+[0.226s] -- The C compiler identification is GNU 11.5.0
+[0.329s] -- The CXX compiler identification is GNU 11.5.0
+[0.353s] -- Detecting C compiler ABI info
+[0.426s] -- Detecting C compiler ABI info - done
+[0.436s] -- Check for working C compiler: /usr/bin/cc - skipped
+[0.436s] -- Detecting C compile features
+[0.436s] -- Detecting C compile features - done
+[0.443s] -- Detecting CXX compiler ABI info
+[0.511s] -- Detecting CXX compiler ABI info - done
+[0.517s] -- Check for working CXX compiler: /usr/bin/c++ - skipped
+[0.517s] -- Detecting CXX compile features
+[0.517s] -- Detecting CXX compile features - done
+[0.540s] -- Found ament_cmake: 2.5.6 (/opt/ros/jazzy/share/ament_cmake/cmake)
+[0.669s] -- Found Python3: /usr/bin/python3 (found version "3.12.3") found components: Interpreter 
+[0.839s] -- Found ament_lint_auto: 0.17.5 (/opt/ros/jazzy/share/ament_lint_auto/cmake)
+[0.945s] -- Added test 'flake8' to check Python code syntax and style conventions
+[0.945s] -- Configured 'flake8' exclude dirs and/or files: 
+[0.948s] -- Added test 'lint_cmake' to check CMake code style
+[0.949s] -- Added test 'pep257' to check Python code against some of the docstring style conventions in PEP 257
+[0.951s] -- Added test 'xmllint' to check XML markup files
+[0.953s] -- Configuring done (0.9s)
+[0.956s] -- Generating done (0.0s)
+[0.958s] -- Build files have been written to: /home/hornet/Desktop/pathfollowingbot/build/pathbot_description
+[0.962s] Invoked command in '/home/hornet/Desktop/pathfollowingbot/build/pathbot_description' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake /home/hornet/Desktop/pathfollowingbot/src/pathbot_description -DCMAKE_INSTALL_PREFIX=/home/hornet/Desktop/pathfollowingbot/install/pathbot_description
+[0.962s] Invoking command in '/home/hornet/Desktop/pathfollowingbot/build/pathbot_description': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --build /home/hornet/Desktop/pathfollowingbot/build/pathbot_description -- -j16 -l16
+[0.993s] Invoked command in '/home/hornet/Desktop/pathfollowingbot/build/pathbot_description' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --build /home/hornet/Desktop/pathfollowingbot/build/pathbot_description -- -j16 -l16
+[0.999s] Invoking command in '/home/hornet/Desktop/pathfollowingbot/build/pathbot_description': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --install /home/hornet/Desktop/pathfollowingbot/build/pathbot_description
+[1.004s] -- Install configuration: ""
+[1.004s] -- Installing: /home/hornet/Desktop/pathfollowingbot/install/pathbot_description/share/pathbot_description/launch
+[1.005s] -- Installing: /home/hornet/Desktop/pathfollowingbot/install/pathbot_description/share/pathbot_description/launch/rviz.launch.py
+[1.005s] -- Installing: /home/hornet/Desktop/pathfollowingbot/install/pathbot_description/share/pathbot_description/urdf
+[1.005s] -- Installing: /home/hornet/Desktop/pathfollowingbot/install/pathbot_description/share/pathbot_description/urdf/robot.gazebo.xacro
+[1.005s] -- Installing: /home/hornet/Desktop/pathfollowingbot/install/pathbot_description/share/pathbot_description/urdf/robot.xacro
+[1.005s] -- Installing: /home/hornet/Desktop/pathfollowingbot/install/pathbot_description/share/pathbot_description/rviz
+[1.005s] -- Installing: /home/hornet/Desktop/pathfollowingbot/install/pathbot_description/share/pathbot_description/rviz/slam.rviz
+[1.005s] -- Installing: /home/hornet/Desktop/pathfollowingbot/install/pathbot_description/share/ament_index/resource_index/package_run_dependencies/pathbot_description
+[1.005s] -- Installing: /home/hornet/Desktop/pathfollowingbot/install/pathbot_description/share/ament_index/resource_index/parent_prefix_path/pathbot_description
+[1.005s] -- Installing: /home/hornet/Desktop/pathfollowingbot/install/pathbot_description/share/pathbot_description/environment/ament_prefix_path.sh
+[1.005s] -- Installing: /home/hornet/Desktop/pathfollowingbot/install/pathbot_description/share/pathbot_description/environment/ament_prefix_path.dsv
+[1.005s] -- Installing: /home/hornet/Desktop/pathfollowingbot/install/pathbot_description/share/pathbot_description/environment/path.sh
+[1.005s] -- Installing: /home/hornet/Desktop/pathfollowingbot/install/pathbot_description/share/pathbot_description/environment/path.dsv
+[1.005s] -- Installing: /home/hornet/Desktop/pathfollowingbot/install/pathbot_description/share/pathbot_description/local_setup.bash
+[1.005s] -- Installing: /home/hornet/Desktop/pathfollowingbot/install/pathbot_description/share/pathbot_description/local_setup.sh
+[1.005s] -- Installing: /home/hornet/Desktop/pathfollowingbot/install/pathbot_description/share/pathbot_description/local_setup.zsh
+[1.005s] -- Installing: /home/hornet/Desktop/pathfollowingbot/install/pathbot_description/share/pathbot_description/local_setup.dsv
+[1.005s] -- Installing: /home/hornet/Desktop/pathfollowingbot/install/pathbot_description/share/pathbot_description/package.dsv
+[1.005s] -- Installing: /home/hornet/Desktop/pathfollowingbot/install/pathbot_description/share/ament_index/resource_index/packages/pathbot_description
+[1.005s] -- Installing: /home/hornet/Desktop/pathfollowingbot/install/pathbot_description/share/pathbot_description/cmake/pathbot_descriptionConfig.cmake
+[1.005s] -- Installing: /home/hornet/Desktop/pathfollowingbot/install/pathbot_description/share/pathbot_description/cmake/pathbot_descriptionConfig-version.cmake
+[1.006s] -- Installing: /home/hornet/Desktop/pathfollowingbot/install/pathbot_description/share/pathbot_description/package.xml
+[1.006s] Invoked command in '/home/hornet/Desktop/pathfollowingbot/build/pathbot_description' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --install /home/hornet/Desktop/pathfollowingbot/build/pathbot_description

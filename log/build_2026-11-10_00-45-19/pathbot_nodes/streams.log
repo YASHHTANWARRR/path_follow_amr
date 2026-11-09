@@ -1,0 +1,63 @@
+[0.006s] Invoking command in '/home/hornet/Desktop/pathfollowingbot/build/pathbot_nodes': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake /home/hornet/Desktop/pathfollowingbot/src/pathbot_nodes -DCMAKE_INSTALL_PREFIX=/home/hornet/Desktop/pathfollowingbot/install/pathbot_nodes
+[0.210s] -- The C compiler identification is GNU 11.5.0
+[0.313s] -- The CXX compiler identification is GNU 11.5.0
+[0.337s] -- Detecting C compiler ABI info
+[0.408s] -- Detecting C compiler ABI info - done
+[0.414s] -- Check for working C compiler: /usr/bin/cc - skipped
+[0.414s] -- Detecting C compile features
+[0.415s] -- Detecting C compile features - done
+[0.421s] -- Detecting CXX compiler ABI info
+[0.487s] -- Detecting CXX compiler ABI info - done
+[0.493s] -- Check for working CXX compiler: /usr/bin/c++ - skipped
+[0.494s] -- Detecting CXX compile features
+[0.494s] -- Detecting CXX compile features - done
+[0.524s] -- Found ament_cmake: 2.5.6 (/opt/ros/jazzy/share/ament_cmake/cmake)
+[0.652s] -- Found Python3: /usr/bin/python3 (found version "3.12.3") found components: Interpreter 
+[0.825s] -- Found rclcpp: 28.1.21 (/opt/ros/jazzy/share/rclcpp/cmake)
+[0.906s] -- Found rosidl_generator_c: 4.6.9 (/opt/ros/jazzy/share/rosidl_generator_c/cmake)
+[0.930s] -- Found rosidl_generator_cpp: 4.6.9 (/opt/ros/jazzy/share/rosidl_generator_cpp/cmake)
+[0.957s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[0.989s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[1.121s] -- Found rmw_implementation_cmake: 7.3.3 (/opt/ros/jazzy/share/rmw_implementation_cmake/cmake)
+[1.126s] -- Found rmw_fastrtps_cpp: 8.4.4 (/opt/ros/jazzy/share/rmw_fastrtps_cpp/cmake)
+[1.291s] -- Found OpenSSL: /usr/lib/x86_64-linux-gnu/libcrypto.so (found version "3.0.13")  
+[1.310s] -- Found FastRTPS: /opt/ros/jazzy/include (Required is at least version "2.13") 
+[1.334s] -- Using RMW implementation 'rmw_fastrtps_cpp' as default
+[1.458s] -- Found sensor_msgs: 5.3.8 (/opt/ros/jazzy/share/sensor_msgs/cmake)
+[1.540s] -- Found ament_lint_auto: 0.17.5 (/opt/ros/jazzy/share/ament_lint_auto/cmake)
+[1.610s] -- Added test 'cppcheck' to perform static code analysis on C / C++ code
+[1.610s] -- Configured cppcheck include dirs: 
+[1.610s] -- Configured cppcheck exclude dirs and/or files: 
+[1.610s] -- Added test 'lint_cmake' to check CMake code style
+[1.611s] -- Added test 'uncrustify' to check C / C++ code style
+[1.611s] -- Configured uncrustify additional arguments: 
+[1.611s] -- Added test 'xmllint' to check XML markup files
+[1.612s] -- Configuring done (1.6s)
+[1.619s] -- Generating done (0.0s)
+[1.623s] -- Build files have been written to: /home/hornet/Desktop/pathfollowingbot/build/pathbot_nodes
+[1.631s] Invoked command in '/home/hornet/Desktop/pathfollowingbot/build/pathbot_nodes' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake /home/hornet/Desktop/pathfollowingbot/src/pathbot_nodes -DCMAKE_INSTALL_PREFIX=/home/hornet/Desktop/pathfollowingbot/install/pathbot_nodes
+[1.631s] Invoking command in '/home/hornet/Desktop/pathfollowingbot/build/pathbot_nodes': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --build /home/hornet/Desktop/pathfollowingbot/build/pathbot_nodes -- -j16 -l16
+[1.669s] [ 50%] Building CXX object CMakeFiles/scan_frame_corrector.dir/src/scan_frame_corrector.cpp.o
+[6.972s] [100%] Linking CXX executable scan_frame_corrector
+[7.352s] [100%] Built target scan_frame_corrector
+[7.360s] Invoked command in '/home/hornet/Desktop/pathfollowingbot/build/pathbot_nodes' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --build /home/hornet/Desktop/pathfollowingbot/build/pathbot_nodes -- -j16 -l16
+[7.361s] Invoking command in '/home/hornet/Desktop/pathfollowingbot/build/pathbot_nodes': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --install /home/hornet/Desktop/pathfollowingbot/build/pathbot_nodes
+[7.368s] -- Install configuration: ""
+[7.368s] -- Installing: /home/hornet/Desktop/pathfollowingbot/install/pathbot_nodes/lib/pathbot_nodes/scan_frame_corrector
+[7.370s] -- Set non-toolchain portion of runtime path of "/home/hornet/Desktop/pathfollowingbot/install/pathbot_nodes/lib/pathbot_nodes/scan_frame_corrector" to ""
+[7.370s] -- Installing: /home/hornet/Desktop/pathfollowingbot/install/pathbot_nodes/share/ament_index/resource_index/package_run_dependencies/pathbot_nodes
+[7.370s] -- Installing: /home/hornet/Desktop/pathfollowingbot/install/pathbot_nodes/share/ament_index/resource_index/parent_prefix_path/pathbot_nodes
+[7.370s] -- Installing: /home/hornet/Desktop/pathfollowingbot/install/pathbot_nodes/share/pathbot_nodes/environment/ament_prefix_path.sh
+[7.370s] -- Installing: /home/hornet/Desktop/pathfollowingbot/install/pathbot_nodes/share/pathbot_nodes/environment/ament_prefix_path.dsv
+[7.370s] -- Installing: /home/hornet/Desktop/pathfollowingbot/install/pathbot_nodes/share/pathbot_nodes/environment/path.sh
+[7.370s] -- Installing: /home/hornet/Desktop/pathfollowingbot/install/pathbot_nodes/share/pathbot_nodes/environment/path.dsv
+[7.370s] -- Installing: /home/hornet/Desktop/pathfollowingbot/install/pathbot_nodes/share/pathbot_nodes/local_setup.bash
+[7.370s] -- Installing: /home/hornet/Desktop/pathfollowingbot/install/pathbot_nodes/share/pathbot_nodes/local_setup.sh
+[7.370s] -- Installing: /home/hornet/Desktop/pathfollowingbot/install/pathbot_nodes/share/pathbot_nodes/local_setup.zsh
+[7.370s] -- Installing: /home/hornet/Desktop/pathfollowingbot/install/pathbot_nodes/share/pathbot_nodes/local_setup.dsv
+[7.370s] -- Installing: /home/hornet/Desktop/pathfollowingbot/install/pathbot_nodes/share/pathbot_nodes/package.dsv
+[7.370s] -- Installing: /home/hornet/Desktop/pathfollowingbot/install/pathbot_nodes/share/ament_index/resource_index/packages/pathbot_nodes
+[7.370s] -- Installing: /home/hornet/Desktop/pathfollowingbot/install/pathbot_nodes/share/pathbot_nodes/cmake/pathbot_nodesConfig.cmake
+[7.370s] -- Installing: /home/hornet/Desktop/pathfollowingbot/install/pathbot_nodes/share/pathbot_nodes/cmake/pathbot_nodesConfig-version.cmake
+[7.370s] -- Installing: /home/hornet/Desktop/pathfollowingbot/install/pathbot_nodes/share/pathbot_nodes/package.xml
+[7.372s] Invoked command in '/home/hornet/Desktop/pathfollowingbot/build/pathbot_nodes' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --install /home/hornet/Desktop/pathfollowingbot/build/pathbot_nodes
