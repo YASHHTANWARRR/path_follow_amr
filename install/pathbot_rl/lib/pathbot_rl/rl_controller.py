@@ -16,7 +16,9 @@ from rclpy.qos import qos_profile_sensor_data
 from sensor_msgs.msg import LaserScan
 from stable_baselines3 import SAC
 
-from warehouse_env import GOAL_TOL, MAX_RANGE, MAX_V, MAX_W, N_BEAMS, build_obs, wrap
+from warehouse_env import GOAL_TOL, MAX_RANGE, MAX_V, MAX_W, N_BEAMS, WAYPOINT_TOL, build_obs, wrap
+
+LOOP = [(-4.5, -3.0), (4.5, -3.0), (4.5, 7.0), (-4.5, 7.0)]  # same loop the policy was trained on
 
 GROUP = 720 // N_BEAMS  # 720 LiDAR beams -> 36 policy beams, min-pooled
 
@@ -26,11 +28,16 @@ class RLController(Node):
         super().__init__("rl_controller")
         default_model = os.path.join(get_package_share_directory("pathbot_rl"), "models", "sac_warehouse.zip")
         self.declare_parameter("model", "")
+        self.declare_parameter("loop", False)  # True: follow the waypoint loop forever (lap mode)
         model_path = self.get_parameter("model").value or default_model
         self.policy = SAC.load(model_path, device="cpu")
         self.ranges = None
         self.pose = None          # (x, y, yaw)
         self.goal = None          # (x, y)
+        self.loop = self.get_parameter("loop").value
+        self.wp = 0               # index into LOOP in lap mode
+        if self.loop:
+            self.goal = LOOP[0]
         self.last_v = self.last_w = 0.0  # m/s and rad/s, same units as training
         self.create_subscription(LaserScan, "/scan_fixed", self.on_scan, qos_profile_sensor_data)
         self.create_subscription(PoseWithCovarianceStamped, "/amcl_pose", self.on_pose, 10)
@@ -50,6 +57,8 @@ class RLController(Node):
         self.pose = (p.x, p.y, yaw)
 
     def on_goal(self, msg):
+        if self.loop:
+            return  # lap mode ignores RViz goals
         self.goal = (msg.pose.position.x, msg.pose.position.y)
         self.get_logger().info(f"new goal ({self.goal[0]:.2f}, {self.goal[1]:.2f})")
 
@@ -59,7 +68,13 @@ class RLController(Node):
             x, y, th = self.pose
             dx, dy = self.goal[0] - x, self.goal[1] - y
             dist = math.hypot(dx, dy)
-            if dist < GOAL_TOL:
+            if self.loop and dist < WAYPOINT_TOL:
+                self.wp = (self.wp + 1) % len(LOOP)
+                self.goal = LOOP[self.wp]
+                self.get_logger().info(f"waypoint {self.wp} reached")
+                dist = math.hypot(self.goal[0] - x, self.goal[1] - y)
+                dx, dy = self.goal[0] - x, self.goal[1] - y
+            if not self.loop and dist < GOAL_TOL:
                 self.goal = None
                 self.get_logger().info("goal reached")
             else:

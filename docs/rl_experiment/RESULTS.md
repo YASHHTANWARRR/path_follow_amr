@@ -30,3 +30,26 @@ Likely causes, not yet tested: sim-to-sim gap (the trainer uses a 2D kinematic m
 calibrated turn gain of 1.6 and perfect map; Gazebo has skid-steer slip, scan noise and a
 different scan resolution), and the policy has not learned to handle clutter near the start.
 Full log: `deploy_gazebo_log.txt`.
+
+## Loop task (closed rectangle, lap time), domain randomized
+
+Route: rectangle (-4.5,-3) -> (4.5,-3) -> (4.5,7) -> (-4.5,7), closest wall 0.61 m.
+Training: 300k steps, randomized turn gain (1.2-2.0) and scan noise (sigma 0.03 m, 2% dropout),
+reward = progress + 0.5*speed - 0.01/step + 10 per waypoint + 50 per lap, -10 on collision.
+Episode: 1500 steps (150 s).
+
+| Item | Value |
+|------|-------|
+| Final reward (ep_rew_mean) | 818 at 279k steps (rising from 26 at start) |
+| Laps per 150 s episode (20 held-out episodes, simulator) | 2.00 |
+| Best lap | 54.3 s |
+| Mean lap | 64.3 s |
+
+Lap-time trend across training is not measured yet (only final evaluation). Files: `train_loop_log.txt`,
+`loop_learning_curve.png`, `loop_monitor.csv`.
+
+### Gazebo loop test (attempt 1, not working yet)
+The policy loads, the scan (10 Hz) and AMCL pose arrive, but `/cmd_vel_nav` carries zeros from
+Nav2's `controller_server` and `behavior_server`, which publish on the same topic. The robot did not
+move. Earlier goal-reaching success was timing-dependent. Next step: a clean command path for RL
+(either remove Nav2's command publishers in RL mode or publish on a topic nothing else uses).
